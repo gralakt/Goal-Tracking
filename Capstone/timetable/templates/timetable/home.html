@@ -1,0 +1,84 @@
+{% extends 'timetable/base.html' %}
+{% block content %}
+	<td></td>
+<div id="body">
+
+		<div id='left-container'>
+
+			<div id='calendar'>
+				<button id="previous"></button><button id="next"></button>
+
+				<div id="calendar-container">
+				</div>
+			</div>
+			<div class="OPEN" id="open_sidebar_button">
+			</div>
+
+			<div id="tasks_container">
+				<h5 id="tasks_div_header">Choose Date</h5>
+				<div>
+					<form action="javascript:void(0);">
+						<input id="task_title_input" type="text" placeholder="Add New Task">
+						<input id="submit-task" type="submit" value="Submit">
+					</form>
+				</div>
+					<div id="tasks_list_container">
+						TO DO
+						<div id="tasks_list">
+							<!-- Active Tasks -->
+						</div>
+					</div>
+					<div id="done_tasks_list_container">
+						DONE
+						<div id="done_tasks_list">
+							<!-- Unactive Tasks -->
+						</div>
+					</div>
+			</div>
+
+
+	</div>
+	<div id='x'>
+
+	</div>
+	<div id='middle-conatiner'>
+
+		<div class="create-routine-container">
+
+			<form action="javascript:void(0);">
+
+				<div class="disp">
+
+					<span>&#9998</span>
+					<input  type="text" name="routine_title" id="routine_title" placeholder="NAME OF THE ROUTINE...">
+					<br>
+					<label style="margin-left: 15px;">Repeat:</label><select name="repetition" id="routine_repetition">
+						<option value="1">Daily</option>
+						<option value="7">Weekly</option>s
+						<option value="14">Biweekly</option>
+						<option value="30">Monthly</option>
+						<option value="91">Every 3 Months</option>
+						<option value="182">Every 6 Months</option>
+						<option value="365">Yearly</option>
+					</select>
+					
+				</div>
+
+				<div class="Progress">
+
+						<input type="submit" name="submit_routine" id="submit_routine" value="CREATE A NEW ROUTINE">
+
+				</div>
+
+			</form>
+
+		</div>
+
+		<div id='routines-container'>
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TimeTable</title>
+
+		{% load static %}
+
+		<script src="{% static 'timetable/base.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'timetable/base.css' %}">
+
+		<script src="{% static 'timetable/right_home.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'timetable/right_home.css' %}">
+
+
+		<style>
+
+			ul {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+				transition: top 0.3s; /* Transition effect when sliding down (and up) */	
+				right: 0;
+			}
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #333;
+			}
+			li {
+			  float: right;
+			}
+			li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+			/* Change the link color to #111 (black) on hover */
+			li a:hover {
+			  background-color: #111;
+			}
+
+		</style>
+
+
+	</head>
+
+
+	<body>
+
+		<div id="nav_bar">
+
+			<ul id="navbar">
+
+				<li>
+					{% if request.user.is_authenticated %}	
+						<a href="{% url 'logout' %}">Logout</a>
+					{% else %}
+						<a href="{% url 'login' %}">Login</a>
+					{% endif %}
+				</li>
+				
+			  <li><a href="{% url 'home' %}">Home</a></li>
+
+			</ul>
+
+		</div>
+
+
+		{% block content %}
+		{% endblock %}
+
+
+		<script>
+			/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			  var currentScrollPos = window.pageYOffset;
+			  if (prevScrollpos > currentScrollPos) {
+			    document.getElementById("navbar").style.top = "0";
+			    document.getElementById("left-container").style.marginTop = "44px";
+			    document.getElementById("left-container").style.marginBottom = "0px";
+		  		document.querySelector("#open_sidebar_button").style.marginTop = "44px";
+			  } else {
+			    document.getElementById("navbar").style.top = "-50px";
+		  		document.querySelector("#open_sidebar_button").style.marginTop = "10%";
+			    document.getElementById("left-container").style.marginTop = "10%";
+			    document.getElementById("left-container").style.marginBottom = "10%";
+			  }
+			  prevScrollpos = currentScrollPos;
+			}
+		</script>
+
+
+	</body>
+</html>
