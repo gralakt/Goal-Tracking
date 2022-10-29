@@ -13,5 +13,6 @@ after many months of study and concentrated hard work,
 I was awarded with a certificate documenting my knowledge (available on my LinkedIn profile),
 with the highest marks for all of my six projects.
 
-When creating the idea for app, I aimed to combine a Calendar and a Reminders applications from iOS.
-
+When creating the idea for app, I aimed to combine a Calendar and a Reminders applications from iOS into one,
+and improve the process by adding a visual representation of progress in habit formation,
+based on the 90 repetition theory which states that after 90 repetitions, an activity becomes a habit
