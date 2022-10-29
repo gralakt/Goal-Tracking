@@ -8,8 +8,10 @@ https://user-images.githubusercontent.com/104684050/198851784-15a9fc4b-d91a-46c9
 
 ### Background
 This application was my final project on the Harvard 'CS50 Web Development with Python and JavaScript' course.
-I was able to get the highest possible rating for it and thanks to that 
-I was awarded the certificate with the highest marks for all of my six projects.
+I was able to get the highest possible rating for that capstone project and thanks to that
+after many months of study and concentrated hard work,
+I was awarded with a certificate documenting my knowledge (available on my LinkedIn profile),
+with the highest marks for all of my six projects.
 
-When creating the project, I aimed to combine a Calendar and a Reminders applications from iOS.
+When creating the idea for app, I aimed to combine a Calendar and a Reminders applications from iOS.
 
